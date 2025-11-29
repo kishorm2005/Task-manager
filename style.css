@@ -1,0 +1,246 @@
+/* Gray workspace background: laptop, coffee mug, notebook, working items */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(mn.jpeg);
+  /* Unique gray workspace with laptop and coffee mug [web:72] */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Main app container */
+.app-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 16px;
+  background:rgb(219, 166, 98);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+h1, h2 {
+  text-align: center;
+  font-style: italic;
+  color: #333;
+}
+
+/* Form styles */
+.task-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.task-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ffb68a;
+  min-width: 220px;
+  font-style: italic;
+  background-color: #fffaf5;
+}
+
+/* Orange add button */
+.task-form button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff7a1a;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-style: italic;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.task-form button:hover {
+  background-color: #e86405;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 20px;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 400px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-style: italic;
+  background-color: #f9f9f9;
+}
+
+/* Task cards container */
+.task-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+}
+
+/* Orange + white task card */
+.task-card {
+  padding: 15px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fffaf5, #ffd0a1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ffb68a;
+}
+
+/* Completed task card */
+.task-card.completed {
+  background: linear-gradient(135deg, #fff2e6, #ffb68a);
+}
+
+/* Decorative circle */
+.task-card::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  top: -20px;
+  right: -20px;
+}
+
+/* Card text */
+.task-card h3 {
+  margin: 0 0 8px;
+  font-style: italic;
+  color: #333;
+}
+
+.task-card p {
+  margin: 0 0 10px;
+  font-style: italic;
+  color: #444;
+}
+
+.task-status {
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 8px;
+  color: #b45309;
+}
+
+/* Buttons on card */
+.card-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.card-buttons button {
+  padding: 6px 11px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.card-buttons .edit-btn {
+  background-color: #ffffff;
+  border: 1px solid #ffb68a;
+  color: #333;
+}
+
+.card-buttons .delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+/* Edit section */
+.edit-section {
+  margin-top: 25px;
+  border-radius: 12px;
+  padding: 15px;
+  background: #fffaf5;
+  border: 1px solid #ffb68a;
+}
+
+.edit-section input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ffb68a;
+  font-style: italic;
+  background-color: #ffffff;
+}
+
+.italic-label {
+  font-style: italic;
+}
+
+.edit-section button {
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 8px;
+  cursor: pointer;
+  font-style: italic;
+}
+
+#saveEditBtn {
+  background-color: #ff7a1a;
+  color: #fff;
+}
+
+#cancelEditBtn {
+  background-color: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+.highlight {
+  background-color: #ffe08a;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.task-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.priority-badge {
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.priority-low {
+  background-color: #4caf50;
+}
+
+.priority-medium {
+  background-color: #ff9800;
+}
+
+.priority-high {
+  background-color: #f44336;
+}
+
+.due-date {
+  color: #555;
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Task Manager</h1>
+
+    <div class="task-form">
+      <input type="text" id="taskTitle" placeholder="Task title">
+      <input type="text" id="taskDescription" placeholder="Task description">
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search tasks by title...">
+    </div>
+
+    <h2>Task List</h2>
+    <div id="taskCards" class="task-cards">
+      <!-- Task cards will be added here -->
+    </div>
+
+    <div id="editSection" class="edit-section hidden">
+      <h2>Edit Task</h2>
+      <input type="hidden" id="editId">
+      <input type="text" id="editTitle" placeholder="Task title">
+      <input type="text" id="editDescription" placeholder="Task description">
+      <label class="italic-label">
+        <input type="checkbox" id="editCompleted">
+        Completed
+      </label>
+      <button id="saveEditBtn">Save</button>
+      <button id="cancelEditBtn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
